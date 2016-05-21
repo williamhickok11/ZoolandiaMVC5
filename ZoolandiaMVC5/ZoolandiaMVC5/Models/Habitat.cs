@@ -10,6 +10,5 @@ namespace ZoolandiaMVC.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public int IdHabitatType { get; set; }
-        public int IdEmployee { get; set; }
     }
 }

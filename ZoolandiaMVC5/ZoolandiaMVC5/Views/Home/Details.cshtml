@@ -1,0 +1,36 @@
+﻿@model ZoolandiaMVC5.ViewModels.AnimalViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>About @Html.DisplayFor(model => model.Name)</h2>
+
+<table class="table">
+    <tr>
+        <td>
+            <h4>Species:</h4>
+            @Html.DisplayFor(model => model.Species)
+        </td>
+        <td>
+            <h4>Genus:</h4>
+            @Html.DisplayFor(model => model.Genus)
+        </td>
+        <td>
+            <h4>Habitat:</h4>
+            <p>You can find @Html.DisplayFor(model => model.Name) in the @Html.DisplayFor(model => model.Habitat) @Html.DisplayFor(model => model.HabitatType)</p>
+        </td>
+        <td>
+            <h4>Employees:</h4>
+            <p>Have any questions? feel free to ask our employees who work at the @Html.DisplayFor(model => model.Habitat):</p>
+            @*@foreach (var item in Model.Employees)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                </tr>
+            }*@
+        </td>
+    </tr>
+</table>
+

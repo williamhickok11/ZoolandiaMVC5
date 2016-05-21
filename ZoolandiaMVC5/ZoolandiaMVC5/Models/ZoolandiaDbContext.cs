@@ -36,6 +36,10 @@ namespace ZoolandiaMVC5.Models
                 .ToTable("Habitat")
                 .HasKey(h => h.ID);
 
+            modelBuilder.Entity<HabitatType>()
+                .ToTable("HabitatType")
+                .HasKey(ht => ht.ID);
+
             modelBuilder.Entity<Image>()
                 .ToTable("Image")
                 .HasKey(i => i.ID);
