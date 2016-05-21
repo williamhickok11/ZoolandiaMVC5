@@ -1,0 +1,22 @@
+﻿@model List<ZoolandiaMVC.Models.Animal>
+
+@{
+    ViewBag.Title = "ViewAnimals";
+}
+
+<h2>Welcome to ZOOLANDIA!!!</h2>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Learn More", "Details", new { animalId = item.ID })
+            </td>
+        </tr>
+    }
+</table>
